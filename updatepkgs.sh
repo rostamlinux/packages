@@ -93,7 +93,7 @@ for PKGDIR in "${DIRS[@]}"; do
     # Get Old Build Version
     OLDBUILD=$(ls $WORKING_DIR/$ARCH/$PKG-*.pkg.tar.zst 2> /dev/null)
     OLDBUILD=$(basename $OLDBUILD 2> /dev/null)
-    OLDBUILDN=${${OLDBUILD}/$PKG/}
+    OLDBUILDN=${OLDBUILD/$PKG/}
     OLDPKGVER=$(awk -F- '{print $2}' <(echo $OLDBUILDN))
     OLDPKGREL=$(awk -F- '{print $3}' <(echo $OLDBUILDN))
     if ! [[ "$OLDPKGREL" =~ ^[0-9]+$ ]]; then
