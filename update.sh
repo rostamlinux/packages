@@ -24,7 +24,7 @@ bash updatedb.sh
 # Push changes to repository
 MSG="$(date +'%d %B %Y') - Repository Updated."
 echo -e "${CYAN}# Pushing changes...${RESET}"
-git rm -r --cached x86_64 *.sh *.txt
+git rm -r --cached x86_64 *.txt
 git commit -m "Performing Clean Up..."
 git add -A .
 git commit -m "$MSG"
