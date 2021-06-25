@@ -1,2 +1,3 @@
 https://aur.archlinux.org/polybar.git
 https://aur.archlinux.org/trizen.git
+https://aur.archlinux.org/yay.git
