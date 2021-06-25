@@ -67,7 +67,7 @@ GITCOUNT=0; while read LINE; do
 done < $FILE
 
 # Return Success Message
-echo -e "${BLUE}# Cloned $GITCOUNT Repositories.${RESET}"
+echo -e "${BLUE}# Cloned $GITCOUNT Repositories Successfully.${RESET}"
 
 # Back to User's Path
 cd $WORKING_DIR
@@ -120,6 +120,7 @@ for PKGDIR in "${DIRS[@]}"; do
     # If There Was a Newer Version:
     if [[ $NEWBUILDVER != $OLDBUILDVER ]]; then
 
+        # Return Message
         echo -e "${YELLOW}# Update for $PKG Available, Starting Build...${RESET}"
 
         # Build Package
@@ -141,6 +142,7 @@ for PKGDIR in "${DIRS[@]}"; do
         ((UPDATEDPKGS++))
     
     else
+        # Return Message
         echo -e "${CYAN}# $PKG $NEWBUILDVER is Up-To-Date.${RESET}"
     fi
 
@@ -156,7 +158,6 @@ done
 echo -e "${BLUE}# Updated $UPDATEDPKGS of $GITCOUNT Packages Successfully.${RESET}"
 
 # Remove Temperory Directory
-echo -e "${CYAN}# Deleting Temperory \"$DIR\" Folder...${RESET}"
 rm -rf $DIR
 echo -e "${BLUE}# Deleted Temperory \"$DIR\" Directory Successfully.${RESET}"
 
