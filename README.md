@@ -10,7 +10,7 @@ Add these lines to the end of `/etc/pacman.conf`:
 ```
 [rostam]
 SigLevel = Optional TrustAll
-Server = https://rostamlinux.github.io/RostamPkgs/$arch
+Server = https://rostamlinux.github.io/rostam-packages/$arch
 ```
 Then update database files with executing this command:
 ```
@@ -24,7 +24,7 @@ Comment out `[rostam]` profile in `/etc/pacman.conf`, It should be like:
 ```
 # [rostam]
 # SigLevel = Optional TrustAll
-# Server = https://rostamlinux.github.io/RostamPkgs/$arch
+# Server = https://rostamlinux.github.io/rostam-packages/$arch
 ```
 Then update database files with executing this command:
 ```
