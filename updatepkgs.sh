@@ -128,13 +128,13 @@ for PKGDIR in "${DIRS[@]}"; do
         echo -e "${YELLOW}# Update for $PKG Available, Starting Build...${RESET}"
 
         # Build Package
-        makepkg -s
+        makepkg -s > /dev/null &
 
         # Get Current Build Name
         NEWBUILD=$(ls *.pkg.tar.zst)
 
         # Remove Old Build
-        rm $WORKING_DIR/$ARCH/$OLDBUILDN
+        rm $WORKING_DIR/$ARCH/$OLDBUILD
 
         # Copy New Build to Package Repository
         cp $NEWBUILD $WORKING_DIR/$ARCH
