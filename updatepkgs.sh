@@ -134,7 +134,7 @@ for PKGDIR in "${DIRS[@]}"; do
         NEWBUILD=$(ls *.pkg.tar.zst)
 
         # Remove Old Build
-        rm $WORKING_DIR/$ARCH/$PKG*
+        rm $WORKING_DIR/$ARCH/$OLDBUILDN
 
         # Copy New Build to Package Repository
         cp $NEWBUILD $WORKING_DIR/$ARCH
