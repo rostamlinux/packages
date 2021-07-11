@@ -34,6 +34,7 @@ if [[ -e $DIR ]]; then
         [Yy][Ee][Ss]|Y|y)
             rm -rf $DIR
             echo -e "${RED}# Current \"$DIR\" Folder Deleted.${RESET}"
+            STRT=$(date +%s)
         ;;
         *)
             echo -e "${RED}# You Need To Delete \"$DIR\" Before Starting.${RESET}"
