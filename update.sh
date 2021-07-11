@@ -24,13 +24,13 @@ bash updatedb.sh
 # Push changes to repository
 MSG="$(date +'%d %B %Y') - Repository Updated."
 echo -e "${CYAN}# Pushing changes...${RESET}"
-git commit -a -m "Update" > /dev/null
-git rm -r --cached x86_64 > /dev/null
-git commit -m "Performing Clean Up..." > /dev/null
-git add -A . > /dev/null
-git commit -m "$MSG" > /dev/null
-git branch -m main > /dev/null
-git push origin --force > /dev/null
+git commit -a -m "Update" &> /dev/null
+git rm -r --cached x86_64 &> /dev/null
+git commit -m "Performing Clean Up..." &> /dev/null
+git add -A . &> /dev/null
+git commit -m "$MSG" &> /dev/null
+git branch -m main &> /dev/null
+git push origin --force &> /dev/null
 echo -e "${BLUE}# $MSG${RESET}"
 
 echo -e "${GREEN}# Clean up completed.${RESET}"
