@@ -37,7 +37,7 @@ for DIR in $DIRS; do
 
     # Creating/Updating Repository Database
     echo -e "${YELLOW}# Updating \"$DIR\" Repository Database...${RESET}"
-    repo-add rostam.db.tar.gz *.pkg.tar.zst
+    repo-add rostam.db.tar.gz *.pkg.tar.zst > /dev/null
     sleep 1
 
     # Return Success Message
