@@ -2,6 +2,12 @@
 
 # Performing Package Rebuild + Database Update For Automotion Purposes.
 
+# Current Path
+CURRENT_DIR=${pwd}
+
+# Change Path to The Command's Path (Suitable for cron jobs)
+cd ${0%\/*}
+
 # Start Runtime Counter
 STRT=$(date +%s)
 
@@ -21,7 +27,7 @@ bash updatepkgs.sh
 # Update Repository Database
 bash updatedb.sh
 
-# Push changes to repository
+# Push Changes to Repository
 MSG="$(date +'%d %B %Y') - Repository Updated."
 echo -e "${CYAN}# Pushing changes...${RESET}"
 git commit -a -m "Update" &> /dev/null
@@ -33,4 +39,8 @@ git branch -m main &> /dev/null
 git push origin --force &> /dev/null
 echo -e "${BLUE}# $MSG${RESET}"
 
+# Get Back to Old Path
+cd $CURRENT_DIR
+
+# Success Message
 echo -e "${GREEN}# Clean up completed.${RESET}"
