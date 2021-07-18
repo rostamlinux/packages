@@ -1,4 +1,5 @@
 https://github.com/rostamlinux/rostam-misc-pkgs.git
 https://aur.archlinux.org/polybar.git
+https://aur.archlinux.org/plymouth.git
 https://aur.archlinux.org/trizen.git
 https://aur.archlinux.org/yay.git
