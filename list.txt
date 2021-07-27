@@ -1,6 +1,7 @@
-https://github.com/rostamlinux/rostam-misc-pkgs.git
-https://aur.archlinux.org/polybar.git
+https://aur.archlinux.org/pfetch.git
 https://aur.archlinux.org/plymouth.git
+https://aur.archlinux.org/polybar.git
 https://aur.archlinux.org/trizen.git
-https://aur.archlinux.org/yay.git
 https://aur.archlinux.org/xgetres.git
+https://aur.archlinux.org/yay.git
+https://github.com/rostamlinux/rostam-misc-pkgs.git
