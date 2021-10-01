@@ -68,8 +68,8 @@ GITCOUNT=0; while read LINE; do
 done < $FILE
 
 # Fix Sub Directories (Only for rostam-misc-pkgs)
-mv rostam-misc-pkgs/*/ .
-rm -rf rostam-misc-pkgs
+mv rostam-packages/*/ .
+rm -rf rostam-packages
 
 # Return Success Message
 echo -e "${BLUE}# Cloned $GITCOUNT Repositories Successfully.${RESET}"
