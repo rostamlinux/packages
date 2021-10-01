@@ -1,6 +1,6 @@
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/MahdyMirzade/MahdyMirzade/main/assets/gifs/gear.gif" width="30px"/>
-  RostamPkgs
+  Packages
 </h1>
 <h3 align="center">All necessary compiled packages for me and my projects in one repository.</h3>
 
@@ -10,7 +10,7 @@ Add these lines to the end of `/etc/pacman.conf`:
 ```
 [rostam]
 SigLevel = Optional TrustAll
-Server = https://rostamlinux.github.io/rostam-packages/$arch
+Server = https://rostamlinux.github.io/packages/$arch
 ```
 Then update database files with executing this command:
 ```
@@ -24,7 +24,7 @@ Comment out `[rostam]` profile in `/etc/pacman.conf`, It should be like:
 ```
 # [rostam]
 # SigLevel = Optional TrustAll
-# Server = https://rostamlinux.github.io/rostam-packages/$arch
+# Server = https://rostamlinux.github.io/packages/$arch
 ```
 Then update database files with executing this command:
 ```
