@@ -1,4 +1,4 @@
-https://aur.archlinux.org/betterlockscreen.git
+https://aur.archlinux.org/i3lock-color.git
 https://aur.archlinux.org/pfetch.git
 https://aur.archlinux.org/plymouth.git
 https://aur.archlinux.org/polybar.git
