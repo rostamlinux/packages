@@ -67,7 +67,7 @@ GITCOUNT=0; while read LINE; do
 
 done < $FILE
 
-# Fix Sub Directories (Only for rostam-misc-pkgs)
+# Fix Sub Directories (Only for rostam-packages)
 mv rostam-packages/*/ .
 rm -rf rostam-packages
 
@@ -129,16 +129,16 @@ for PKGDIR in "${DIRS[@]}"; do
         echo -e "${YELLOW}# Update for $PKG Available, Starting Build...${RESET}"
 
         # Build Package
-        makepkg -s #&> /dev/null
+        makepkg -si #&> /dev/null
 
         # Get Current Build Name
-        NEWBUILD=$(ls *.pkg.tar.zst)
+        NEWBUILD=$(find . -type f -name "*.pkg.tar.zst")
 
         # Remove Old Build
-        rm $WORKING_DIR/$ARCH/$OLDBUILD
+        [ -e "$WORKING_DIR/$ARCH/$OLDBUILD" ] && rm $WORKING_DIR/$ARCH/$OLDBUILD
 
         # Copy New Build to Package Repository
-        cp $NEWBUILD $WORKING_DIR/$ARCH
+        [ -e "$NEWBUILD" ] && cp $NEWBUILD $WORKING_DIR/$ARCH
 
         # Return Success Message
         echo -e "${BLUE}# $PKG's Package updated from $OLDBUILDVER to $NEWBUILDVER Successfully.${RESET}"
