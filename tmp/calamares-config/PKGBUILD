@@ -1,0 +1,16 @@
+# Maintainer: Mahdy Mirzade <me@mahdym.ir>
+
+pkgname=calamares-config
+pkgver=1.0
+pkgrel=2
+pkgdesc="Calamares configuration for RostamLinux"
+arch=('any')
+url="https://github.com/rostamlinux/rostam-packages"
+license=('GPL3')
+provides=($pkgname)
+conflicts=($pkgname)
+
+package() {
+	# copy all files recursively in /etc/calamares
+	(find calamares -type f -exec install -Dm 644 "{}" "$pkgdir/etc/{}" \;)
+}

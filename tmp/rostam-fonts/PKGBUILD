@@ -1,0 +1,16 @@
+# Maintainer: Mahdy Mirzade <me@mahdym.ir>
+
+pkgname=rostam-fonts
+pkgver=1.1
+pkgrel=3
+pkgdesc="Full Fonts for RostamLinux"
+arch=('any')
+url="https://github.com/rostamlinux/rostam-misc-pkgs/tree/main/rostam-fonts"
+license=('GPL3')
+provides=($pkgname)
+conflicts=($pkgname)
+depends=('pango' 'noto-fonts' 'noto-fonts-cjk' 'noto-fonts-emoji' 'noto-fonts-extra' 'ttf-joypixels' 'ttf-dejavu' 'ttf-jetbrains-mono' 'ttf-opensans' 'ttf-hack' 'terminus-font')
+
+package() {
+    	(find * -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/fonts/{}" \;)
+}

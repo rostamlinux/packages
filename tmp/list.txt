@@ -1,0 +1,11 @@
+https://aur.archlinux.org/fingerprint-gui.git
+https://aur.archlinux.org/i3lock-color.git
+https://aur.archlinux.org/pfetch.git
+https://aur.archlinux.org/plymouth.git
+https://aur.archlinux.org/polybar.git
+https://aur.archlinux.org/rtl8821ce-dkms-git.git
+https://aur.archlinux.org/system76-power.git
+https://aur.archlinux.org/trizen.git
+https://aur.archlinux.org/xgetres.git
+https://aur.archlinux.org/yay.git
+https://github.com/rostamlinux/rostam-packages.git

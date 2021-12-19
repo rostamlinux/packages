@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=About Developer
+Comment=About Mahdy Mirzade (@MahdyMirzade)
+Exec=/usr/bin/about.sh
+Icon=telegram
+Type=Application
+Categories=System

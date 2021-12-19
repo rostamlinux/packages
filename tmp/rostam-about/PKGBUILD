@@ -1,0 +1,20 @@
+# Maintainer: Mahdy Mirzade <me@mahdym.ir>
+
+pkgname=rostam-about
+pkgver=1.0
+pkgrel=1
+pkgdesc="About the developer of RostamLinux."
+arch=('any')
+url="https://github.com/rostamlinux/rostam-misc-pkgs/tree/main/rostam-about"
+license=('GPL3')
+provides=($pkgname)
+conflicts=($pkgname)
+depends=('midori')
+
+package() {
+	# copy whole dir recursively to destination
+	(find mahdymirzade -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/{}" \;)
+	# copy files
+	install -Dm 755 about.sh -t ${pkgdir}/usr/bin/
+	install -Dm 644 about.desktop -t ${pkgdir}/usr/share/applications/
+}
