@@ -129,7 +129,7 @@ for PKGDIR in "${DIRS[@]}"; do
         echo -e "${YELLOW}# Update for $PKG Available, Starting Build...${RESET}"
 
         # Build Package
-        makepkg -si #&> /dev/null
+        makepkg -s #&> /dev/null
 
         # Get Current Build Name
         NEWBUILD=$(find . -type f -name "*.pkg.tar.zst")
